@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Casa4You: Home</title>
+		<link rel="icon" href="data:,">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+		<meta name="description" content="Jávea is the ultimate holiday destination for the whole family. Jávea is known for its beautiful, large palm-sand beach with a bustling boulevard (El Arenal), but you will also find small bays with crystal clear water here where you can enjoy swimming and snorkelling.">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<!-- ///////////////////////////////
+			Loader styles (must be inline)
+			/////////////////////////////// -->
+
+		<style>
+			html{
+				background-color: 224c5a;
+			}
+
+			.loader{
+				background-color: #224c5a;
+				position: fixed;
+				transition: all 1s linear;
+				transition-delay: 1s;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 9999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial, sans-serif;
+				color: white;
+				font-size: 10px;
+				text-align: center;
+				pointer-events: none;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+
+			.loader .img.logo{
+				background-image: url("logo192.png");
+				background-size: contain;
+				width: 75px;
+				height: 75px;
+			}
+
+			.dots-5 {
+				width:5px;
+				height:5px;
+				background: #ffffff;
+				border-radius: 50%;
+				box-shadow: 10px 0 #ffffff22,-10px 0 #ffffff;
+				animation:d5 1s infinite linear alternate;
+				position: absolute;
+				text-align: center;
+				margin-left: 35px;
+			}
+			@keyframes d5 {
+				0% {box-shadow: 10px 0 #ffffff,-10px 0 #ffffff22;background: #ffffff}
+				33%{box-shadow: 10px 0 #ffffff,-10px 0 #ffffff22;background: #ffffff22}
+				66%{box-shadow: 10px 0 #ffffff22,-10px 0 #ffffff;background: #ffffff22}
+			}
+
+			html.loaded .loader{
+				opacity: 0;
+			}
+		</style>
+		<script type="module" crossorigin src="/assets/index.3f80ee64.js"></script>
+		<link rel="stylesheet" href="/assets/index.1d167f9b.css">
+	</head>
+	<body>
+		<div class="loader">
+			<div>
+				<div class="img logo"></div>
+				<div class="dots-5"></div>
+			</div>
+		</div>
+
+
+		<main>
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Hero
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<div class="hero-container">
+				<div class="hero-overlay"></div>
+			</div>
+
+			<div class="top-cover">
+				<div class="left"></div>
+				<div class="center"></div>
+				<div class="right"></div>
+			</div>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Home
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<header>
+				<a href="#Home" aria-label="Home">
+					<span class="logo"></span>
+					<h2>CASA 4 YOU</h2>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a class="button book-now small">Book now</a>
+						</li>
+
+						<li class="menu">
+							<button type="button" onclick="window.mojo.showMenu()" aria-label="Open menu">
+								<span class="img menu"></span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<div class="mobile-menu">
+				<ul>
+					<li>
+						<div class="img logo"></div>
+						<button type="button" class="close" onclick="window.mojo.hideMenu()" aria-label="Close menu">X</button>
+						<br>
+						<strong>MENU</strong>
+					</li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Home">Home</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="https://casa4you.nl/en/search-results/">Accomodations</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="https://casa4you.nl/en/blogs/">Blogs</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="https://casa4you.nl/en/who-we-are/">Contact</a></li>
+				</ul>
+
+				<ul class="contact">
+					<li><a href="mailto:info@holidayjavea.com">info@holidayjavea.com</a></li>
+				</ul>
+
+			</div>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Home
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section id="Home" class="home">
+				<div class="intro-para">
+					<strong class="hi">CASA4YOU</strong>
+					<h1>Rental of holiday villas and apartments</h1>
+					<strong>
+						Jávea is the ultimate holiday destination for the whole family. Jávea is known for its beautiful, large palm-sand beach with a bustling boulevard (El Arenal), but you will also find small bays with crystal clear water here where you can enjoy swimming and snorkelling.
+					</strong>
+				</div>
+
+				<div class="img logo"></div>
+
+				<div class="buttons">
+
+					<select name="city">
+						<option value="" selected>All</option>
+						<option value="Benitachell">Benitachell</option>
+						<option value="Denia">Denia</option>
+						<option value="Javea">Javea</option>
+						<option value="Moraira">Moraira</option>
+					</select>
+
+					<input type="date" name="arrival" placeholder="Arrival" />
+					<input type="date" name="departure" placeholder="Departure" />
+
+					<input type="text" placeholder="Guests" />
+
+					<a class="button"
+					   href="https://casa4you.nl/en/search-results/?city=&arrive=&depart=&guest=&trp-form-language=en">Search</a>
+				</div>
+			</section>
+
+			<section class="mint hola">
+				<h1 class="animated fadeInDown">Hola, welcome to Casa4You!</h1>
+
+				<div class="has-2-columns">
+					<div>
+						<img class="animated fadeInLeft"
+						     src="/assets/Welcome-to-javea-1-1536x1024.6d3d9d0a.jpg" />
+						<img class="animated fadeInLeft" data-delay="400"
+						     src="/assets/1bde86bd-32c1-4c45-a926-44f7ddc0d38f-scaled.660efa85.jpg" />
+					</div>
+
+					<div>
+						<p class="animated fadeInRight" data-delay="100">We, Tim & Jonneke, are happy to help you find the ideal holiday accommodation. Whether you are looking for a beautiful villa with private pool or an apartment within walking distance of the beach, we are happy to offer you a carefree holiday. </p>
+						<p class="animated fadeInRight" data-delay="200">We think it is important that you can enjoy your well-deserved holiday carefree. Our personal service starts with the very first contact. Prior to your holiday, we are happy to help you with all questions and wishes.</p>
+						<p class="animated fadeInRight" data-delay="300">On the day of arrival we will inform you personally welcome at the accommodation, where we are happy to take a moment to show you the accommodation and to answer any questions. You can also contact us with your questions during your stay.</p>
+						<a class="button animated fadeInRight" data-delay="400">More info</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="accommodations">
+				<h1>A selection of our accommodations</h1>
+
+				<div class="xhas-2-columns">
+					<div class="previous-work">
+
+						<h2 class="animated zoomIn portfolio-title">Apartments</h2>
+
+						<div class="scroller-controls">
+							<button class="control close" onclick="window.mojo.hideScroller()"><span class="small">(esc)</span> X</button>
+							<div class="control arrow-left" onclick="window.mojo.scrollLeft()"></div>
+							<div class="control arrow-right" onclick="window.mojo.scrollRight()"></div>
+						</div>
+
+						<div id="scroller" class="scroller animated fadeIn slow">
+							<div id="Calc" class="image-container fill" onclick="window.mojo.showImage('#Calc')">
+								<img src="/assets/d2d005e0-ed44-4c77-90e5-23c401a0846c-scaled.733e96c6.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+
+							<div id="ICXCore01" class="image-container fill" onclick="window.mojo.showImage('#ICXCore01')">
+								<img src="/assets/ff9dc6f1-ec10-4899-87f3-8dfc3cb28133-scaled.36aec69c.jpg" loading="lazy" alt="ICX Core 01" width="275" height="200">
+
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+							</div>
+
+							<div id="xxx" class="image-container fill" onclick="window.mojo.showImage('#xxx')">
+								<img src="/assets/5de5c0e2-f05d-4eab-8d23-08fbf5b6a552-scaled.6b06868e.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+
+							<div id="xxxx" class="image-container fill" onclick="window.mojo.showImage('#xxxx')">
+								<img src="/assets/7167cb72-a7f6-4c7e-b904-4348b5953840-scaled.f821f501.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="previous-work">
+
+						<h2 class="animated zoomIn portfolio-title">Villas</h2>
+
+						<div class="scroller-controls">
+							<button class="control close" onclick="window.mojo.hideScroller()"><span class="small">(esc)</span> X</button>
+							<div class="control arrow-left" onclick="window.mojo.scrollLeft()"></div>
+							<div class="control arrow-right" onclick="window.mojo.scrollRight()"></div>
+						</div>
+
+						<div id="scroller" class="scroller animated fadeIn slow">
+							<div id="Calc" class="image-container fill" onclick="window.mojo.showImage('#Calc')">
+								<img src="/assets/d2d005e0-ed44-4c77-90e5-23c401a0846c-scaled.733e96c6.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+
+							<div id="ICXCore01" class="image-container fill" onclick="window.mojo.showImage('#ICXCore01')">
+								<img src="/assets/ff9dc6f1-ec10-4899-87f3-8dfc3cb28133-scaled.36aec69c.jpg" loading="lazy" alt="ICX Core 01" width="275" height="200">
+
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+							</div>
+
+							<div id="xxx" class="image-container fill" onclick="window.mojo.showImage('#xxx')">
+								<img src="/assets/5de5c0e2-f05d-4eab-8d23-08fbf5b6a552-scaled.6b06868e.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+
+							<div id="xxxx" class="image-container fill" onclick="window.mojo.showImage('#xxxx')">
+								<img src="/assets/7167cb72-a7f6-4c7e-b904-4348b5953840-scaled.f821f501.jpg" loading="lazy" alt="Calc" width="275" height="200">
+								<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<a class="button">All accommodations</a>
+			</section>
+
+			<section class="mint">
+				<h1 class="animated fadeInDown">The ultimate holiday destination</h1>
+
+				<div class="has-2-columns">
+
+					<div>
+						<p class="animated fadeInUp" data-delay="100">Jávea is the <strong>ultimate holiday destination</strong> for the whole family. Jávea is known for its beautiful, large palm-sand beach with a bustling boulevard (El Arenal), but you will also find small bays with crystal clear water here where you can enjoy swimming and snorkelling. </p>
+
+						<p class="animated fadeInUp" data-delay="200">The old town of Jávea dates back to the Middle Ages. Here you can stroll through the narrow streets where you will find plenty of shops, restaurants, bars and even an authentic, covered fresh market "el Mercado". </p>
+
+						<p class="animated fadeInUp" data-delay="300">The picturesque harbor "el Puerto" where fishing boats come in with their catch in the afternoon is also well worth a visit. </p>
+
+						<p class="animated fadeInUp" data-delay="400">In Jávea there are many cozy and good restaurants. The offer is wide; <strong>authentic Spanish tapas bars</strong> hip beach bars where you can enjoy cocktails and very tasty food, but also chic restaurants for <strong>absolute fine dining.</strong> </p>
+
+						<p class="animated fadeInUp" data-delay="500">You can enjoy the Costa Blanca all year round. There are fantastic walking and cycling routes and there are several golf courses in the area.</p>
+
+						<a class="button animated fadeInRight" data-delay="400">Book now</a>
+					</div>
+					<div>
+						<img class="animated fadeInUp"
+							 src="/assets/Apartment-Arenal-Dream-1-1536x1024.47965bcd.jpg" />
+
+						<img class="animated fadeInUp" data-delay="400"
+						     src="/assets/9ee19e0f-63a1-4413-9eba-77092894bd42-scaled.92b266a3.jpg" />
+
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>What we offer</h2>
+
+				<div class="has-3-columns">
+					<div>
+						<h3>Comfortable accommodations</h3>
+						<p>
+							All our accommodations are fully furnished and offer you all the comforts of home: a fully equipped kitchen, ironed bed linen, towels, television, free wifi and more.
+						</p>
+					</div>
+					<div>
+						<h3>Personal service</h3>
+						<p>
+							Our personal service starts with the very first contact. We are happy to help you find the ideal holiday accommodation. On site, we personally welcome you at the accommodation. During your stay you can contact us with all your questions.
+						</p>
+					</div>
+					<div>
+						<h3>Correct description</h3>
+						<p>
+							We know all the accommodations we offer you inside and out. As a result, we are always able to provide the correct information. We know all owners personally and have good contact about maintenance and the like
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="mint">
+				<h1>These guests preceded you</h1>
+				<h2>TODO...</h2>
+			</section>
+
+			<section>
+				<h1>Frequently asked questions</h1>
+				<h2>TODO...</h2>
+			</section>
+
+			<section class="mint">
+				<h1>Benefits of booking directly</h1>
+				<h2>TODO...</h2>
+			</section>
+
+			<div class="image-banner animated fadeIn v-slow" id="Current"></div>
+
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Footer
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<footer>
+				<div class="has-3-columns xdont-retract">
+					<div>
+						<div class="h3">Contact</div>
+						<ul>
+							<li><a href="mailto:info@holidayjavea.com">info@holidayjavea.com</a></li>
+							<li>TODO...</li>
+						</ul>
+					</div>
+
+					<div>
+						<div class="h3">Menu</div>
+						<ul>
+							<li>TODO...</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="copyright">
+					&copy; 2022 Casa 4 You
+				</div>
+			</footer>
+		</main>
+
+		<div class="offline-alert">
+			You're not connected to the internet.
+			<span class="hide-threshold3">
+				Loading site from cache.
+			</span>
+			<span class="hide-threshold2">
+				You may not be seeing the most up-to-date version of the site.
+			</span>
+		</div>
+
+		
+		
+	</body>
+</html>
