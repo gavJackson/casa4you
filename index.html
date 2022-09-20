@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Casa4You: Home</title>
+		<link rel="icon" href="data:,">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+		<meta name="description" content="Jávea is the ultimate holiday destination for the whole family. Jávea is known for its beautiful, large palm-sand beach with a bustling boulevard (El Arenal), but you will also find small bays with crystal clear water here where you can enjoy swimming and snorkelling.">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- ///////////////////////////////
+		GA
+		/////////////////////////////// -->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20842963-1"></script>-->
+<!--		<script>-->
+<!--			window.dataLayer = window.dataLayer || [];-->
+<!--			function gtag(){dataLayer.push(arguments);}-->
+<!--			gtag('js', new Date());-->
+
+<!--			gtag('config', 'UA-20842963-1');-->
+<!--		</script>-->
+
+		<!-- ///////////////////////////////
+		Loader styles (must be inline)
+		/////////////////////////////// -->
+
+		<style>
+			html{
+				background-color: black;
+			}
+
+			.loader{
+				background-color: rgba(0,0,0,1);
+				position: fixed;
+				transition: all 1s linear;
+				transition-delay: 1s;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 9999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial, sans-serif;
+				color: white;
+				font-size: 10px;
+				text-align: center;
+				pointer-events: none;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+
+			.loader .img.logo{
+				background-image: url("logo192.png");
+				background-size: contain;
+				width: 75px;
+				height: 75px;
+			}
+
+			.dots-5 {
+				width:5px;
+				height:5px;
+				background: #ffffff;
+				border-radius: 50%;
+				box-shadow: 10px 0 #ffffff22,-10px 0 #ffffff;
+				animation:d5 1s infinite linear alternate;
+				position: absolute;
+				text-align: center;
+				margin-left: 35px;
+			}
+			@keyframes d5 {
+				0% {box-shadow: 10px 0 #ffffff,-10px 0 #ffffff22;background: #ffffff}
+				33%{box-shadow: 10px 0 #ffffff,-10px 0 #ffffff22;background: #ffffff22}
+				66%{box-shadow: 10px 0 #ffffff22,-10px 0 #ffffff;background: #ffffff22}
+			}
+
+			html.loaded .loader{
+				opacity: 0;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="loader">
+			<div>
+				<div class="img logo"></div>
+				<div class="dots-5"></div>
+			</div>
+		</div>
+
+<!--		<a class="button whats-app-button" href="https://wa.me/447587426936" target="thirdParty" rel="nofollow" aria-label="Chat to us on WhatsApp">-->
+<!--			<div class="img"></div>-->
+<!--		</a>-->
+
+		<main>
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Hero
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<div class="hero-container">
+				<video id="heroVideo" playsinline muted loop poster="images/hero/world-still.jpg">
+				</video>
+
+				<div class="hero-overlay"></div>
+			</div>
+
+			<div class="top-cover">
+				<div class="left"></div>
+				<div class="center"></div>
+				<div class="right"></div>
+			</div>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Home
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<header>
+				<a href="#Home" aria-label="Home">
+					<span class="logo"></span>
+					<h2>Gavin Jackson</h2>
+				</a>
+				<nav>
+					<ul>
+						<li class="hide-threshold3"><a href="mailto:gav_jackson@yahoo.com">gav_jackson@yahoo.com</a></li>
+						<li class="hide-threshold3"><a href="tel:+447587426936">+44 (0) 7587 426 936</a></li>
+						<li class="menu">
+							<button type="button" onclick="window.mojo.showMenu()" aria-label="Open menu">
+								<span class="img menu"></span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<div class="mobile-menu">
+				<ul>
+					<li>
+						<div class="img logo"></div>
+						<button type="button" class="close" onclick="window.mojo.hideMenu()" aria-label="Close menu">X</button>
+						<br>
+						<strong>MENU</strong>
+					</li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Home">Home</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Skills">Technical skills</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Career">Career summary</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Current">Current position</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#ICX">About IntegroCX (ICX)</a></li>
+					<li><a class="menu-link" onclick="window.mojo.hideMenu()" href="#Personal">Outside of work</a></li>
+				</ul>
+
+				<ul class="contact">
+					<li><a href="mailto:gav_jackson@yahoo.com">gav_jackson@yahoo.com</a></li>
+					<li><a href="tel:+447587426936">+44 (0) 7587 426 936</a></li>
+				</ul>
+
+			</div>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Home
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section id="Home" class="home">
+				<div class="intro-para">
+					<strong class="hi">Hi, I'm</strong>
+					<div class="tag-line">Frontend Developer</div>
+					<h1>Gavin Jackson</h1>
+					<strong>
+						I'm an extremely focused and productive, hands on Head of Frontend Development with over 20 years of professional experience.
+						<br />
+					</strong>
+						Based in Bath, UK
+				</div>
+
+				<div class="img logo"></div>
+
+				<div class="buttons">
+					<a class="button hero"
+					   href="#Skills"
+					   onmouseover="window.mojo.showHomeText('My technical skills\n\n...and some examples of my work')"
+					   onmouseout="window.mojo.hideHomeText()">Skills</a>
+
+					<span class="connector"></span>
+
+					<a class="button"
+					   href="#Career"
+					   onmouseover="window.mojo.showHomeText('My story\n\n...so far')"
+					   onmouseout="window.mojo.hideHomeText()">Career</a>
+
+					<span class="connector"></span>
+
+					<a class="button"
+					   href="#Current"
+					   onmouseover="window.mojo.showHomeText('What I do\n\n...and my work experience')"
+					   onmouseout="window.mojo.hideHomeText()">Current</a>
+
+					<span class="connector"></span>
+
+					<a class="button"
+					   href="#ICX"
+					   onmouseover="window.mojo.showHomeText('About my framework\n\n...been working on it for 10 years')"
+					   onmouseout="window.mojo.hideHomeText()">ICX</a>
+					<span class="connector"></span>
+
+					<a class="button"
+					   href="#Personal"
+					   onmouseover="window.mojo.showHomeText('Who am I\n\n...outside of work')"
+					   onmouseout="window.mojo.hideHomeText()">Personal</a>
+				</div>
+
+				<div class="scroll-info">
+					<div id="homeText" class="animated fadeIn">
+					</div>
+					<div id="scrollText" class="animated fadeIn">
+						scroll down to find out more
+						<br>
+						⌄
+					</div>
+				</div>
+			</section>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			What
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section id="Skills" class="what after-home">
+				<div class="top-gradient"></div>
+				<div class="img logo-icon animated zoomIn"></div>
+
+				<br>
+
+				<div class="tag-line animated fadeIn" data-delay="1000">Web Development + Web Design + Graphic Design + Animation</div>
+
+<!--				<img class="avatar" src="/images/avatars/gavin.png" width="150" height="150" alt="Gavin Jackson" />-->
+
+				<h2 class="animated zoomIn">Technical skills</h2>
+				<ul>
+					<li class="animated fadeInLeft" data-delay="0">JavaScript / CoffeeScript / HTML / LESS / CSS</li>
+
+					<li class="animated fadeInLeft" data-delay="500">Knockout / Cypress.io / Vue / Svelte / node.js / Electron</li>
+
+					<li class="animated fadeInLeft" data-delay="1000">PhotoShop / iMovie / Flash / Flex</li>
+				</ul>
+
+				<p class="intro">I pride myself on delivering modern, responsive, accessible applications with a focus on user experience.</p>
+
+
+
+				<h3 class="animated zoomIn">I am passionate about what I do</h3>
+
+				<div class="has-2-columns animated fadeInUp">
+					<p><strong>I love writing code and designing solutions and APIs while keeping in mind the business strategy and overall picture.</strong>  I have an eye for design and animation from the early part of my career creating customer facing Flash sites for some of the biggest brands in the world.</p>
+
+					<p>For the last decade, I have been building financial single page applications, built upon <strong>my own JavaScript MVCS framework</strong>; which is used to deliver large scale business critical enterprise applications to some of the largest companies in the financial world.</p>
+
+
+
+				</div>
+
+				<br />
+
+
+				<h3 class="animated zoomIn">Client work and side projects</h3>
+				<div class="has-2-columns animated fadeInUp">
+					<p>I work on projects for companies like CanadaLife and Aegon, big players in the UK's pension market.  Both projects were similar in that we replaced either their entire Wealth Management Platform or a large proportion of it.  Each sprint I planned the frontend work, pair programmed and guided the dev team through their frontend (and sometimes backend) tasks while also liaising with the client, ensuring that their requirements are in a dev ready state for the next sprint.
+						<br />
+						<br />
+						<strong>I am highly motivated and self-driven</strong>, working on internal side projects in-between my project responsibilities, some side projects are a direct result of current project needs, and others are big picture improvements for the entire product suite.  All side projects are self started, and form most of the IntegroCX key features and commercial offering.
+					</p>
+
+					<p>For example, over Xmas 2021, I rewrote all the CSS from the previous 6 years.  Providing a new layered skinning architecture written with performance and overriding in mind, as well as modernising the look of all new projects via a white labelling approach, <strong>built upon Neomorphism</strong>.
+						<br />
+						<br />
+						And in 2022 <strong>I wrote my own compiler</strong> to allow screens in ICX to be written in HTML instead of JSON, to accompany this, I wrote an XSD schema which Development IDEs can interpret and provide intellisense and even validate directly in the code editor when writing screens. This not only improves the developer experience, but more importantly it massively reduces the barrier to entry for developers to work on ICX as it means developers can use their existing HTML and CSS skills.</p>
+				</div>
+
+				<div class="previous-work">
+
+					<h3 class="animated zoomIn portfolio-title">Examples of my work.</h3>
+
+					<div class="scroller-controls">
+						<button class="control close" onclick="window.mojo.hideScroller()"><span class="small">(esc)</span> X</button>
+						<div class="control arrow-left" onclick="window.mojo.scrollLeft()"></div>
+						<div class="control arrow-right" onclick="window.mojo.scrollRight()"></div>
+					</div>
+
+					<div id="scroller" class="scroller animated fadeIn slow">
+
+<!--						<div class="image-container separator">-->
+<!--							<strong>▼ Client projects</strong>-->
+<!--						</div>-->
+
+<!--						<div id="StandardLife" class="image-container fill" onclick="window.mojo.showImage('#StandardLife')">-->
+<!--							<img src="/images/scroller/StandardLife.jpg" loading="lazy" alt="StandardLife" width="164" height="200">-->
+<!--						</div>-->
+
+<!--						<div id="CanadaLife" class="image-container fill" onclick="window.mojo.showImage('#CanadaLife')">-->
+<!--							<img src="/images/scroller/CanadaLife.jpg" loading="lazy" alt="CanadaLife" width="164" height="200">-->
+<!--						</div>-->
+						
+
+						<div class="image-container separator">
+							<strong>▼ ICX</strong>
+						</div>
+
+						<div id="Calc" class="image-container fill" onclick="window.mojo.showImage('#Calc')">
+							<img src="/images/scroller/Calc.jpg" loading="lazy" alt="Calc" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://tools-api.iws-live.com:40052/">Visit site</a>
+						</div>
+
+						<div id="ICXCore01" class="image-container fill" onclick="window.mojo.showImage('#ICXCore01')">
+							<img src="/images/scroller/ICXCore01.jpg" loading="lazy" alt="ICX Core 01" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXCore02" class="image-container fill" onclick="window.mojo.showImage('#ICXCore02')">
+							<img src="/images/scroller/ICXCore02.jpg" loading="lazy" alt="ICX Core 02" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXWealth01" class="image-container fill" onclick="window.mojo.showImage('#ICXWealth01')">
+							<img src="/images/scroller/ICXWealth01.jpg" loading="lazy" alt="ICX Wealth 01" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXWealth03" class="image-container fill" onclick="window.mojo.showImage('#ICXWealth03')">
+							<img src="/images/scroller/ICXWealth03.jpg" loading="lazy" alt="ICX Wealth 03" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXWealth04" class="image-container fill" onclick="window.mojo.showImage('#ICXWealth04')">
+							<img src="/images/scroller/ICXWealth04.jpg" loading="lazy" alt="ICX Wealth 03" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div class="image-container separator">
+							<strong>▼ Documentation</strong>
+						</div>
+
+						<div id="ICXDocs01" class="image-container fill" onclick="window.mojo.showImage('#ICXDocs01')">
+							<img src="/images/scroller/ICXDocs01.jpg" loading="lazy" alt="ICX Documentation 01" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXDocs02" class="image-container fill" onclick="window.mojo.showImage('#ICXDocs02')">
+							<img src="/images/scroller/ICXDocs02.jpg" loading="lazy" alt="ICX Documentation 02" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div id="ICXDocs03" class="image-container fill" onclick="window.mojo.showImage('#ICXDocs03')">
+							<img src="/images/scroller/ICXDocs01.jpg" loading="lazy" alt="ICX Documentation 03" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div class="image-container separator">
+							<strong>▼ Video</strong>
+						</div>
+
+						<div id="ICXMovie" class="image-container" onclick="window.mojo.showImage('#ICXMovie')">
+							<img src="/images/scroller/ICXMovie.jpg" loading="lazy" alt="IntegroCX Movie" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://youtu.be/fvzzL1GTetI">ICX Movie</a>
+						</div>
+
+						<div class="image-container separator">
+							<strong>▼ Web design (personal)</strong>
+						</div>
+
+						<div id="Mollitiam" class="image-container" onclick="window.mojo.showImage('#Mollitiam')">
+							<img src="/images/scroller/Mollitiam01.jpg" loading="lazy" alt="Mollitiam Consulatancy Services Website" width="164" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.mollitiam-cs.com/">Visit site</a>
+						</div>
+
+						<div class="image-container separator">
+							<strong>▼ Book covers (personal)</strong>
+						</div>
+
+						<div id="OtherPeople" class="image-container" onclick="window.mojo.showImage('#OtherPeople')">
+							<img src="/images/scroller/OtherPeople-01.jpg" loading="lazy" alt="Other People cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B097YR3CJR/ref=cm_sw_em_r_mt_dp_YB3PD12BR8AY2WE3ZYNY">View book</a>
+						</div>
+
+						<div id="HelloWorld" class="image-container" onclick="window.mojo.showImage('#HelloWorld')">
+							<img src="/images/scroller/HelloWorld-02.jpg" loading="lazy" alt="Hello World cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B08LTQFRTX/ref=cm_sw_em_r_mt_dp_7B8W08V8FAJZ25RSHF5S">View book</a>
+						</div>
+
+						<div id="AboutAMum" class="image-container" onclick="window.mojo.showImage('#AboutAMum')">
+							<img src="/images/scroller/AboutAMumCover.jpg" loading="lazy" alt="About a mum cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B084HMF5LW/ref=cm_sw_em_r_mt_dp_4TE7GPF8ZFQN4WZMAHPR">View book</a>
+						</div>
+
+						<div id="Charmless" class="image-container" onclick="window.mojo.showImage('#Charmless')">
+							<img src="/images/scroller/ThisCharmlessMan-02.jpg" loading="lazy" alt="This Charmless Man cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B08FNL4XPG/ref=cm_sw_em_r_mt_dp_ZKF6AZF0B8DHYR1GTHWB">View book</a>
+						</div>
+
+						<div id="YouMeStuff02" class="image-container" onclick="window.mojo.showImage('#YouMeStuff02')">
+							<img src="/images/scroller/YouMeAndOtherStufffV2-Cover-v01.jpg" loading="lazy" alt="You me and other stuff cover v02" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B07WPW458V/ref=cm_sw_em_r_mt_dp_BZMQAE7QJRR6H4EQSCZQ">View book</a>
+						</div>
+
+						<div id="YouMeStuff01" class="image-container" onclick="window.mojo.showImage('#YouMeStuff01')">
+							<img src="/images/scroller/YouMeAndOtherStufff-Cover-v03.jpg" loading="lazy" alt="You me and other stuff cover v01" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B07WPW458V/ref=cm_sw_em_r_mt_dp_BZMQAE7QJRR6H4EQSCZQ">View book</a>
+						</div>
+
+						<div id="Marlow02" class="image-container" onclick="window.mojo.showImage('#Marlow02')">
+							<img src="/images/scroller/Marlow-Cover-v04a.jpg" loading="lazy" alt="Marlow Project cover v02" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B07S8C69WQ/ref=cm_sw_em_r_mt_dp_K38JE72K3GBA44TTQW0P">View book</a>
+						</div>
+
+						<div id="Marlow01" class="image-container" onclick="window.mojo.showImage('#Marlow01')">
+							<img src="/images/scroller/Marlow-Cover-v03.jpg" loading="lazy" alt="Marlow Project cover v01" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B07S8C69WQ/ref=cm_sw_em_r_mt_dp_K38JE72K3GBA44TTQW0P">View book</a>
+						</div>
+
+						<div id="Sophie02" class="image-container" onclick="window.mojo.showImage('#Sophie02')">
+							<img src="/images/scroller/AReflectionOfSophie-Cover-v02.jpg" loading="lazy" alt="A Reflection of Sophie Beaumont cover v02" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B077QQ5RH4/ref=cm_sw_em_r_mt_dp_2NGY4BY7WFCHB563MAFP">View book</a>
+						</div>
+
+						<div id="Sophie01" class="image-container" onclick="window.mojo.showImage('#Sophie01')">
+							<img src="/images/scroller/AReflectionOfSophie-Cover-v01.jpg" loading="lazy" alt="A Reflection of Sophie Beaumont cover v01" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B077QQ5RH4/ref=cm_sw_em_r_mt_dp_2NGY4BY7WFCHB563MAFP">View book</a>
+						</div>
+
+						<div id="Rupert" class="image-container" onclick="window.mojo.showImage('#Rupert')">
+							<img src="/images/scroller/RupertsFreeSpirit-Cover-v01.jpg" loading="lazy" alt="Ruperts Free Spirit cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B09RT7YVGT/ref=cm_sw_em_r_mt_dp_ATBYN9YAYQ34Y5VJCTMZ">View book</a>
+						</div>
+
+						<div id="Dexter" class="image-container" onclick="window.mojo.showImage('#Dexter')">
+							<img src="/images/scroller/Dexters-Surprise-Cover-v01.jpg" loading="lazy" alt="Dexters Surpise cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B0827Z4L37/ref=cm_sw_em_r_mt_dp_N3ARZYB7QFXT6P34AZR7">View book</a>
+						</div>
+
+						<div id="Mason" class="image-container" onclick="window.mojo.showImage('#Mason')">
+							<img src="/images/scroller/MasonsRevenge.jpg" loading="lazy" alt="Masons revenge cover" width="125" height="200">
+
+							<a class="cta button hero small" rel="nofollow" target="thirdParty" href="https://www.amazon.co.uk/dp/B07ZPF4PHL/ref=cm_sw_em_r_mt_dp_8H96EQVG7AFZ91MDV2BH">View book</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Career
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section id="Career" class="why white">
+
+				<div class="img logo-icon animated zoomIn"></div>
+
+				<br>
+
+				<div class="tag-line animated fadeIn" data-delay="1000">My story</div>
+				<h2 class="animated zoomIn">Career summary</h2>
+
+				<p class="intro animated fadeIn v-slow">
+					I am an established professional,
+					<br><strong>I've been building web experiences for over 20 years</strong>
+				</p>
+
+				<div class="has-2-columns">
+					<div>
+						<p class="animated fadeInLeft">After University in 2002, I had a couple of ASP and SQL jobs, but <strong>my Frontend career really started in Melbourne, Australia</strong> in 2006 while backpacking, working for an advertising agency and then returning home to the UK and becoming a Senior Flash Developer at a creative agency in Bristol. After that, I contracted around Bristol and the South West.  In that time I worked on projects for big clients and household names such as <strong>Nike, Mattel, Hertz, Estee Lauder, BP, Intel, Barbie and HotWheels</strong> to name a few, and I am proud to say that my work has been seen by millions of users across the world.</p>
+
+						<img class="animated fadeInLeft" src="/images/photos/laptop.jpg" alt="laptop" width="413" height="313">
+					</div>
+
+					<div>
+						<p class="animated fadeInRight">In 2011, I joined Digital Keystone, a small financial software company as a contract Flex Developer.  At the time Digital Keystone had a single client and no product, but over the next three years, while helping grow the company, I built the underlying framework and frontend to an award-winning product called Adaptive Portal. In 2015, <strong>I was offered a partnership</strong> and became Head of Frontend Development and In 2016, we sold Digital Keystone in a <strong>multi-million pound merger</strong> to Dunstan Thomas, where I stayed on as the Group Head of Frontend Engineering. The frontend framework Adaptive Portal, that I built for Digital Keystone was renamed to IntegroCX, and is now the largest product in the suite offered by Dunstan Thomas and what we use to deliver most of our client projects.</p>
+
+						<div class="box-out animated fadeInRight">
+							In 2020, as a shareholder of Dunstan Thomas, I was once again involved in a major acquisition; and Dunstan Thomas was acquired by Curtis Banks, in another multi-million pound deal, roughly 10 times larger than the Digital Keystone deal.  I continued on as the Group Head of Frontend Engineering.
+						</div>
+					</div>
+				</div>
+
+				<hr />
+				<br />
+				<h3 class="animated zoomIn">Annual highlights</h3>
+
+				<div class="scroller animated fadeIn slow">
+					<div class="card current2">
+						<h3>2022</h3>
+						<p><strong>Wrote my own compiler</strong> to allow screens in ICX to be written in HTML instead of JSON, to accompany this, I wrote an XSD schema which Development IDEs can interpret and provide intellisense and even validate directly in the code editor when writing screens.  This not only improves the developer experience, but more importantly it massively reduces the barrier to entry for developers to work on ICX as it means developers can use their existing HTML and CSS skills. </p>
+					</div>
+
+					<div class="card">
+						<h3>2021</h3>
+						<p><strong>I created ICX Lite</strong>, a disconnected, cut down version of ICX which allows it to be used in any project and hooked up to any backend.  Getting started with ICX Lite is as simple as downloading a zip file, and then running 5 node.js commands which would then spin up a server and set up FETest, my frontend testing framework built upon Cypress.io that does screenshot comparison.</p>
+					</div>
+
+					<div class="card">
+						<h3>2020</h3>
+						<p> Dunstan Thomas was acquired by Curtis Banks, and I <strong>sold my shares</strong>.  I also wrote a testing framework, based on Cypress.io which automatically captures and compares screenshots at different device sizes, performs a11y audits and validates performance.  Images, showing before and after screens are now included in all Pull Requests which makes visual reviews at PR time possible, as well as automated, self generating visual site maps. </p>
+					</div>
+
+					<div class="card wide">
+						<h3>2019</h3>
+						<p>Was instrumental in <strong>winning the CanadaLife project</strong>, a multi-million pound project for Dunstan Thomas, I lead the frontend development team, reviewing each frontend Pull Request and supporting any core development needs. </p>
+						<hr />
+						<h3>2018</h3>
+						<p><strong>Became Group Head of Frontend Development</strong> across the whole Dunstan Thomas group of companies.  Continued to lead the frontend of the Aegon project while also building the core frontend team.</p>
+					</div>
+
+					<div class="card wide">
+						<h3>2017</h3>
+						<p><strong>Led the frontend development</strong> to replace the entire platform for Financial Advisers for one of the UK's largest wealth management companies, Aegon</p>
+						<hr />
+						<h3>2016</h3>
+						<p>Was part of a <strong>multi-million pound merger</strong>, where my stock options were realised, and the primary shareholders were able to execute their exit strategies.  This happened when Dunstan Thomas acquired Digital Keystone, meeting our target valuation three years early. The Adaptive Portal also won the UK Platforms Award for best use of Platform Technology for our work with Aegon.</p>
+					</div>
+
+					<div class="card wide">
+						<h3>2015</h3>
+						<p><strong>Offered a partnership</strong>, and the permanent position of Head of Frontend Development in order to make Digital Keystone a more realistic proposition to sell in alignment with the founder's exit strategy. </p>
+						<hr />
+						<h3>2014</h3>
+						<p>Designed and built the frontend of the <strong>multi award-winning Adaptive Portal</strong>, while working on client projects, primarily in financial services.  The Adaptive Portal is a framework for rendering lazy loaded Apps onto a dashboard and for rendering dynamic complex forms, either as single forms or in complex multi screen workflow (which are used quite a bit in finance). Adaptive Portal also won the Platforum 'Best in show' award. </p>
+					</div>
+
+					<div class="card wide">
+						<h3>2013</h3>
+						<p>Built the frontend of QuickPark which used an early build of the Adaptive Portal to render an SVG map showing available parking bays around various South African cities, the project was designed to work on tablets and phones. </p>
+						<hr />
+						<h3>2012</h3>
+						<p>When Digital Keystone decided to move away from Flash as a technology I <strong>chose the frontend tech stack</strong>.  I began work on the early prototypes of the Adaptive Portal as the company strategy shifted from purely an on-site programming services company to one that builds and ships it own product, configuring that product for clients.</p>
+					</div>
+
+					<div class="card">
+						<h3>2011</h3>
+						<p><strong>Joined Digital Keystone</strong> as a contract Flex Developer to build and maintain wealth management applications for Novia Financial and Aegon. </p>
+						<hr />
+						<h3>2010</h3>
+						<p> Worked on the Jo Malone website for Estee Lauder as a Flex developer and did a number of other Flash/Flex contracts for clients ranging from Fisher Price to Drink Aware.</p>
+					</div>
+
+					<div class="card wide">
+						<h3>2009</h3>
+						<p> In my role as Technical Lead at Oakwood DC I <strong>led up a team of 8 Flash Developers</strong> to deliver a £300k project for Radica the electronics division for Mattel US.  We delivered the project on time and on budget.</p>
+						<hr />
+						<h3>2007 - 2008</h3>
+						<p><strong>As Senior Flash Developer</strong> at Oakwood DC, I worked on a number of Flash projects for globally recognised brands such as Barbie, Hotwheels, Disney's Cars, Scrabble and The Simpsons. </p>
+					</div>
+
+					<div class="card">
+						<h3>2006</h3>
+						<p><strong>Worked in Australia</strong> for Publicis Mojo as a Web Developer for clients such as Nike, Hertz, HP and the Victorian Government.  A highlight was working on the Nike Football website for World Cup 2006 and promotions for Australia's big game against Brazil where they dared to believe that history would not repeat itself (but, it did!).</p>
+					</div>
+
+					<div class="card">
+						<h3>2002 - 2005</h3>
+						<p><strong>Graduated top of my class</strong> from De Montfort University in Leicester in 2002 with a first class degree with honours in Multimedia Computing and was also awarded the best student prize for finishing top of my class.  My first few years out of university I worked as a Web Developer in Reading writing ASP and ASP.NET web and windows applications and services before travelling for 20 months. </p>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Image banner
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<div class="image-banner animated fadeIn v-slow" id="Current"></div>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			How
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section class="how">
+
+				<div class="img logo-icon animated zoomIn"></div>
+
+				<br>
+
+				<div class="tag-line animated fadeIn" data-delay="1000">Group Head of Frontend Engineering</div>
+				<h2 class="animated zoomIn">Current position</h2>
+				<p class="intro animated fadeIn v-slow">
+					I code, I build tools, I mentor and train developers, I write documentation, I run sales presentations, I decide features and act as product owner, I interview and build teams, I design...
+				</p>
+
+				<h3 class="animated zoomIn">Day to day leadership</h3>
+				<div class="has-2-columns animated fadeInUp">
+					<p>As Group Head of Frontend Engineering I still develop and add features to the frontend Integro CX framework on which the majority of our projects are built.  I also <strong>mentor and manage a team of Frontend developers</strong> with the goal of building a community with resilience, as well as supporting ~20 backend developers working across various projects across the organisation. I encourage innovation and lead by example, taking the longer more complex route of enhancing the core product in a generic way to benefit current and future projects rather than custom-coding a solution for a single project.</p>
+
+					<p>I hold regular team meetings providing a forum for all team members to discuss their projects, pain points, big wins and anything to share, and to demonstrate features I add to the framework.  I use OKRs (Objectives Key Result) and Hackathons to encourage innovation and ring-fence developers time.  I also produce a bi-monthly PDF, <strong>The Frontend Bulletin</strong>, which I share with the wider company so everyone is informed what the Frontend team are working on and what new features we are adding to IntegroCX.
+					</p>
+				</div>
+
+
+				<h3 class="animated zoomIn">Sales</h3>
+				<div class="has-2-columns animated fadeInUp">
+
+					<p>I am also part of the sales pipeline and heavily involved in sales pitches and growing the company.  I <strong>regularly present to clients and am comfortable in delivering presentations</strong> at the appropriate technical level.  I have several slide decks prepared for prospects that I can customise just ahead of delivery, and I usually take the lead for the technical pitches. For a hackathon in 2021, I produced a sales/marketing video introducing ICX which is on <a href="https://youtu.be/fvzzL1GTetI">YouTube, here</a>.
+					</p>
+					<img src="/images/scroller/ICXMovie.jpg" width="100%" height="100%" alt="Taking notes" loading="lazy">
+				</div>
+
+
+				<hr />
+				<br />
+				<h3 class="animated zoomIn">Work experience</h3>
+
+				<div class="mini-cards animated fadeIn slow">
+					<div class="card current">
+						<h3>Group Head of Frontend Engineering</h3>
+						<p>Dunstan Thomas<br />Permanent, Remote</p>
+						<strong>Oct 2018 - Current</strong>
+					</div>
+
+					<div class="card">
+						<h3>Head of Frontend development</h3>
+						<p>Digital Keystone<br />Permanent, Remote</p>
+						<strong>May 2015 - Oct 2018</strong>
+					</div>
+
+					<div class="card">
+						<h3>Lead Frontend developer</h3>
+						<p>Digital Keystone<br />Contract, Remote</p>
+						<strong>Apr 2012 - May 2015</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flex developer</h3>
+						<p>Digital Keystone<br />Contract, Bath</p>
+						<strong>Mar 2011 - Apr 2012</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flash developer</h3>
+						<p>GDS International<br />Contract, Bristol</p>
+						<strong>Feb 2011 - Mar 2011</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flex developer</h3>
+						<p>Estee Lauder<br />Contract, Bristol</p>
+						<strong>Jul 2010 - Dec 2010</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flash developer</h3>
+						<p>Oakwood DC<br />Contract, Bristol</p>
+						<strong>May 2010 - Jul 2010</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flash developer</h3>
+						<p>Enable Interactive<br />Contract, Bristol</p>
+						<strong>Apr 2010 - May 2010</strong>
+					</div>
+
+					<div class="card">
+						<h3>Technical lead</h3>
+						<p>Oakwood DC<br />Contract, Bristol</p>
+						<strong>Feb 2010 - Apr 2010</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flash developer</h3>
+						<p>Enable Interactive<br />Contract, Bristol</p>
+						<strong>Dec 2009 - Jan 2010</strong>
+					</div>
+
+					<div class="card">
+						<h3>Flash developer</h3>
+						<p>Bay Leino<br />Contract, Remote</p>
+						<strong>Aug 2009 - Oct 2009</strong>
+					</div>
+
+					<div class="card">
+						<h3>Technical lead</h3>
+						<p>Oakwood DC<br />Contract, Bristol</p>
+						<strong>Feb 2009 - Aug 2009</strong>
+					</div>
+
+					<div class="card">
+						<h3>Senior Flash developer</h3>
+						<p>Oakwood DC<br />Permanent, Bristol</p>
+						<strong>Feb 2007 - Feb 2009</strong>
+					</div>
+
+					<div class="card break">
+						<h3>Backpacking...</h3>
+					</div>
+
+					<div class="card">
+						<h3>Web developer</h3>
+						<p>Publicis Mojo<br />Contract, Melbourne</p>
+						<strong>Jan 2006 - May 2006</strong>
+					</div>
+
+					<div class="card break">
+						<h3>Backpacking...</h3>
+					</div>
+
+					<div class="card">
+						<h3>Web developer</h3>
+						<p>Sol-Tec<br />Permanent, Reading</p>
+						<strong>Apr 2003 - Apr 2005</strong>
+					</div>
+
+					<div class="card">
+						<h3>Web developer</h3>
+						<p>Strudwick & Young<br />Permanent, Reading</p>
+						<strong>Jul 2002 - Feb 2003</strong>
+					</div>
+
+					<div class="card break">
+						<h3>Graduated university...</h3>
+					</div>
+
+					<div class="card">
+						<h3>Web designer</h3>
+						<p>ACS<br />Contract, Remote</p>
+						<strong>Sep 2001 - May 2002</strong>
+					</div>
+
+					<div class="card">
+						<h3>Web designer</h3>
+						<p>ACS<br />Permanent, High Wycombe</p>
+						<strong>May 2000 - Jul 2001</strong>
+					</div>
+
+
+				</div>
+
+			</section>
+
+			<section id="ICX" class="white">
+
+				<div class="tag-line animated fadeIn" data-delay="1000">My framework</div>
+				<h2 class="animated zoomIn">About IntegroCX</h2>
+
+				<p class="intro animated fadeIn v-slow">
+					<strong>IntegroCX</strong> is a big part of my career, I have been building it for the past decade.  It is a low code framework for delivering dashboard and form based single page applications.
+				</p>
+
+				<br />
+				<h3 class="animated zoomIn">Intro</h3>
+
+				<div class="has-2-columns animated fadeInUp">
+					<div>
+						Integro CX was renamed from The Adaptive Portal, which I began building while I was working for Digital Keystone.  It is a <strong>low code framework for delivering dashboard and form based single page applications</strong>, low code (on the frontend) from when I was the lone frontend developer supporting multiple projects for some years at Digital Keystone, but still valid at Dunstan Thomas where we have a much smaller frontend team compared to the backend. This means the frontend is entirely configurable from JSON templates which describe dashboard layouts and what is on each form and is capable of fine control over client side validation and dynamic rules.
+					</div>
+
+					<div>
+						Making such a configurable frontend requires a robust and flexible architecture, which I also built myself; an MVCS (Model View Commands Signals) framework based on Knockout.js, but adding all the necessary parts such as Routing, Dependency Management/Injection, PubSub via Signals for events and messaging, and the Command Pattern for sequencing.  This enables entire systems to be prototyped and built through configuration and a bit of styling, rather than custom coding, which is reserved for new features and even those are assessed to see if they can be delivered via new configurations or features in the core framework to benefit future projects.
+					</div>
+				</div>
+
+				<br />
+				<h3 class="animated zoomIn">Sales & API design</h3>
+
+				<div class="has-2-columns animated fadeInUp">
+					<div>
+						A case study I use in sales calls to demonstrate the power of ICX, is that I was able to build a working 12 screen prototype, based on wireframes, <strong>in less than a week</strong>.  This included custom branding, responsive, a11y compliant screens, a dashboard and multi-screen workflow, with interactive graphs and sliders and full test coverage.  Production ready, just needing a backend.
+						<br /><br />
+						As primary architect of the IntegroCX frontend, I design and maintain an API I built from the ground up, my goal is to make using ICX as effortless as possible for the Frontend development teams that consume it.  I believe in making it so <strong>"it just works"</strong> as the developer expects.
+					</div>
+
+					<div>
+						Over the years I have learnt and refined how I do this, good API design is key, but backwards compatibility means compromises also have to be made and this is where <strong>documentation and testing really helps</strong>. So I wrote a markdown file consuming documentation system that automatically generates live interactive examples from manifest files used to describe the various components of ICX and a hash url, screenshot comparison based battery of end-to-end tests that can be invoked using a command line interface tool.
+					</div>
+				</div>
+
+			</section>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Who
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<section id="Personal" class="alt who">
+
+				<br>
+				<div class="img logo-icon animated zoomIn"></div>
+				<br>
+				<div class="tag-line animated fadeIn" data-delay="1000">My framework</div>
+				<h2 class="animated zoomIn">Outside of work</h2>
+				<p class="intro animated fadeIn v-slow">
+					I'm happy for you to find out about me as a person.  I am married with two kids and a puppy; feel free to check me out on:
+					<a href="https://www.facebook.com/gavin.jackson.9028" target="thirdParty" rel="nofollow">Facebook</a>, <a href="https://twitter.com/gav_jackson" target="thirdParty" rel="nofollow">Twitter</a>, <a href="https://www.strava.com/athletes/42860769" target="thirdParty" rel="nofollow">Strava</a> or <a href="https://www.linkedin.com/in/gavin-jackson-68a7a615/" target="thirdParty" rel="nofollow">LinkedIn</a>, my posts, likes and comments reflect who I am in my personal life.</p>
+
+				<div class="has-3-columns">
+					<div class="animated fadeInUp">
+						<h3>Remote</h3>
+						<p>I have been <strong>working remotely since 2012</strong>, attending a few meetings a year but otherwise working entirely from home, first in Bristol, then from Spain and now from Bath.  I have no problem with maintaining productivity and have been a disciplined self-starter since University, demonstrated by graduating top of my class in 2002.
+						</p>
+					</div>
+
+					<div class="animated fadeInUp">
+						<h3>Education</h3>
+
+						<strong>1998 - 2002: De Montfort University Leicester</strong>
+
+						<br />
+						Multimedia Computing: 1st BSc (Hons) - top of my class
+
+						<br />
+						<br />
+
+						<strong>1997-1998: Amersham & Wycombe College</strong>
+
+						<br />
+						A-levels: Computing (A), Maths (D), Physics (D)
+
+						<br />
+						<br />
+
+						<strong>1992-1997: Holmer Green Upper School</strong>
+
+						<br />
+						GCSE: 9 x grade C or above
+
+					</div>
+
+					<div class="animated fadeInUp">
+						<h3>Personal life</h3>
+						<p>I met my wife Lorraine while travelling in Thailand.  We have two kids, Daisy and Henry and live in Bath, but have strong connections to Spain as we spent 3 years living there. I enjoy spending time with my family, riding my bikes (either road or mountain) and being outdoors as much as possible, this spring I hope to introduce my puppy to Standup Paddleboarding.
+						</p>
+					</div>
+
+				</div>
+
+			</section>
+
+			<!-- /////////////////////////////////////////////////////////////////
+
+			Footer
+
+			///////////////////////////////////////////////////////////////// -->
+
+			<footer>
+				<div class="has-3-columns dont-retract">
+					<div>
+						<div class="h3">Contact</div>
+						<ul>
+							<li><a href="mailto:gav_jackson@yahoo.com">gav_jackson@yahoo.com</a></li>
+							<li><a href="tel:+447587426936">+44 (0) 7587 426 936</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<details>
+					<summary>
+						Asset credits
+					</summary>
+
+					<div class="has-2-columns">
+						<div>
+							World Video by Pressmaster from Pexels
+						</div>
+
+						<div>
+							Laptop photo by <a href="https://unsplash.com/@campaign_creators?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Campaign Creators</a> on <a href="https://unsplash.com/s/photos/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+						</div>
+					</div>
+				</details>
+
+				<div class="copyright">
+					<div class="img logo"></div>&copy; 2022 Gavin Jackson
+				</div>
+			</footer>
+		</main>
+
+		<div class="offline-alert">
+			You're not connected to the internet.
+			<span class="hide-threshold3">
+				Loading site from cache.
+			</span>
+			<span class="hide-threshold2">
+				You may not be seeing the most up-to-date version of the site.
+			</span>
+		</div>
+
+		<script type="module" src="/scripts/mojo.js"></script>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
