@@ -1,0 +1,103 @@
+
+///////////////////////////////////////////////////////////
+//
+// buttons
+//
+///////////////////////////////////////////////////////////
+
+.button{
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 40px;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 20px;
+	min-width: 150px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	color: @mint;//fade(white, 80%);
+	padding: 13px 40px 13px 40px;
+	background-color: @blue;
+
+	&.hero{
+		border: none;
+		background-color: @accentColor;
+		color: black;
+
+		&:hover{
+			background-color: @altColor;
+		}
+
+		&.green{
+			background-color: @altColor;
+
+			&:hover{
+				background-color: @accentColor;
+			}
+		}
+	}
+
+	&:hover{
+		color: white;
+		background-color: @gold;
+		text-decoration: none;
+		border-color: white;
+	}
+
+	&.small{
+		min-width: 100px;
+		padding: 5px 0;
+	}
+}
+
+.after-button{
+	margin-left: 20px;
+	font-weight: 300;
+	font-size: 20px;
+	font-style: italic;
+	white-space: nowrap;
+}
+
+.white{
+	.button{
+		&.hero{
+			color: white;
+			background-color: black;
+
+			&:hover{
+				background-color: @altColor;
+			}
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////
+//
+// links
+//
+///////////////////////////////////////////////////////////
+
+
+a{
+	color: white;
+	text-decoration: underline;
+
+	&:hover{
+		color: @altColor;
+		text-decoration: none;
+	}
+
+	&:active{
+		color: @altColor;
+	}
+
+	&.close{
+		text-decoration: none;
+		color: @accentColor;
+
+		&:hover{
+			color: @altColor;
+		}
+	}
+}

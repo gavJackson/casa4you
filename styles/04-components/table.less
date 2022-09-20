@@ -1,0 +1,65 @@
+table{
+	.gradient(@borderColor, fade(darken(@borderColor, 15%), 80%), fade(darken(@borderColor, 10%), 100%));
+
+	caption{
+		font-size: 0;
+		height: 0;
+	}
+
+	width: 100%;
+	border: 1px solid @borderColor;
+
+	tr.separator{
+		border-top: 1px solid @borderColor;
+	}
+
+	th, td{
+		padding: 5px 10px;
+		text-align: left;
+		font-weight: 300;
+		font-size: 16px;
+
+		&.right-aligned{
+			text-align: right;
+		}
+
+		&.note-col{
+			@media (max-width: @threshold3) {
+				display: none;
+			}
+		}
+
+		&.call-cell{
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	thead{
+		th{
+			border-bottom: 1px solid @borderColor;
+			font-weight: 700;
+		}
+	}
+
+	tbody{
+		tr{
+			&:nth-child(odd){
+				background-color: fade(black, 20%);
+			}
+		}
+
+		td{
+			color: white;
+		}
+	}
+}
+
+.notes-point{
+	display: none;
+
+	@media (max-width: @threshold3) {
+		display: revert;
+	}
+}

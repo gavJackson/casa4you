@@ -1,0 +1,24 @@
+.offline-alert{
+	z-index: @z01Modal;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	background-color: #e8e835;
+	color: black;
+	font-size: 13px;
+	line-height: 16px;
+	padding: 5px;
+	display: none;
+}
+
+html.is-offline{
+	.offline-alert {
+		display: block;
+	}
+
+	.whats-app-button{
+		bottom: 30px;
+	}
+}

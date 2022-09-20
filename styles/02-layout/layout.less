@@ -1,0 +1,170 @@
+///////////////////////////////////////////////////////////
+//
+// layout
+//
+///////////////////////////////////////////////////////////
+
+html, body{
+	//.gradient(@backgroundGradientFrom,  @backgroundGradientTo, @backgroundGradientFrom);
+
+	background-color: @outerBGColor;
+	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	.rounded(30px);
+	//.box-shadow(0px 0px 10px 10px fade(black, 15%));
+
+	//@media (max-width: @widthDesktop + 200px) {
+	//	margin-top: 25px;
+	//}
+	@media (max-width: @widthDesktop) {
+		.rounded(0);
+		.box-shadow(none);
+
+		top: 0;
+	}
+
+	min-width: 350px;
+	position: relative;
+	max-width: @widthDesktop;
+	margin: 0 auto;
+	background-color: white;
+	top: 70px;
+	padding: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.top-cover{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 1400px;
+	margin: 0 auto;
+	height: 103px;
+	z-index: @z02OverMain;
+	display: grid;
+	grid-template-columns: 1fr 1200px 1fr;
+	grid-column-gap: 0;
+
+	.left{
+		background-color: @blue;
+	}
+
+	.center{
+		background-image: url("/images/hero/top-cover-center.png");
+		background-size: cover;
+	}
+
+	.right{
+		background-color: @blue;
+	}
+
+	//@media (max-width: @widthDesktop + 200px) {
+	//	top: -10px;
+	//}
+
+	@media (max-width: @widthDesktop) {
+		display: none;
+	}
+	.transition(all, 1s, ease-out);
+}
+
+html.scrolled-past-home{
+	.top-cover{
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+///////////////////////////////
+// scroll snapping
+///////////////////////////////
+
+// Not convinced this is worth it..
+//html{
+//	scroll-snap-type: y mandatory;
+//	scroll-padding: 80px;
+//}
+//
+//.image-banner, h2, h3, h1,
+//section, footer{
+//	scroll-snap-align: start;
+//}
+
+///////////////////////////////////////////////////////////
+//
+// banner (photo)
+//
+///////////////////////////////////////////////////////////
+
+.image-banner{
+	.box-sizing;
+
+	background-image: url("/images/photos/Benefits-of-Booking-Direct-1-scaled-1.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 250px;
+
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+
+	@media (max-width: @threshold3) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.content{
+		max-width: 800px;
+	}
+
+	h2{
+		margin-top: 0;
+		font-weight: 300;
+		line-height: 35px;
+		font-style: italic;
+		text-align: center;
+
+		@media (max-width: @threshold3) {
+			font-size: 30px;
+		}
+
+		@media (max-width: @threshold4) {
+			font-size: 20px;
+		}
+	}
+
+	.title,
+	.name{
+		.rounded(5px);
+
+		background-color: @accentColor;
+		display: inline-block;
+		padding: 10px 20px;
+	}
+
+	.title{
+		margin-top: -30px;
+
+		@media (max-width: @threshold4) {
+			font-size: 13px;
+		}
+	}
+
+	.name{
+		font-size: 20px;
+		font-weight: 300;
+	}
+}

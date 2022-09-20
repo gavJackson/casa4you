@@ -1,0 +1,341 @@
+.scroller{
+	.transition(zoom, 0.75s, ease-out);
+
+	//.scale(0.5);
+	//zoom: 0.5;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	margin-bottom: 50px;
+	scroll-snap-type: x mandatory;
+	//scroll-padding: 0 50%;
+	padding-top: 3px;
+	padding-left: 3px;
+	overscroll-behavior-x: contain;
+	//display: flex;
+	//flex-wrap: wrap;
+	//justify-content: left;
+
+	&:hover {
+		//zoom: 1;
+
+		&::-webkit-scrollbar {
+			height: 7px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: @altColor;
+		}
+	}
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		height: 7px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: @altColor;
+	}
+
+	///////////////////////////////////////////////////////////
+	//
+	// Individual images
+	//
+	///////////////////////////////////////////////////////////
+
+	.image-container{
+		max-height: 200px;
+		scroll-snap-align: center;
+		display: inline-block;
+		cursor: pointer;
+		//margin-bottom: 10px;
+		margin-right: 10px;
+
+		img{
+			max-height: 200px;
+			object-fit: cover;
+			object-position: left top;
+		}
+
+		&:hover{
+			outline: 3px solid @accentColor;
+		}
+
+		&.separator{
+			.rotation(-90deg);
+			.transform-origin(0 0);
+			pointer-events: none;
+			max-height: 0;
+			height: 0;
+			width: 0;
+			line-height: 0;
+			top: 0;
+			position: relative;
+			strong{
+				color: white;
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+			display: inline-block;
+			position: relative;
+		}
+	}
+
+}
+
+.card{
+	.transition(all, 0.5s, ease-out);
+	scroll-snap-align: start;
+	width: 250px;
+	display: inline-block;
+	white-space: normal;
+	margin-right: 20px;
+	vertical-align: top;
+	padding: 10px;
+	height: 100%;
+	//border: 1px solid fade(@borderColor, 30%);
+
+	h3{
+		text-align: left;
+		color: @altColor;
+		margin-bottom: 0;
+	}
+
+	p{
+		font-size: 14px;
+		line-height: 19px;
+		text-align: left;
+	}
+
+	&:hover{
+		background-color: black;
+		color: white;
+		strong{
+			color: @altColor;
+		}
+	}
+
+	&.wide{
+		width: 350px;
+	}
+
+	&.current2{
+		border: 2px solid black;
+	}
+
+	&.current{
+		background-color: @altColor;
+		color: black;
+		h3{
+			color: white;
+		}
+
+		&:hover{
+			h3{
+				color: @altColor
+			}
+		}
+	}
+}
+
+.mini-cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.card{
+		width: 200px;
+		text-align: left;
+		align-self: center;
+		margin-bottom: 10px;
+		border-color: fade(white, 30%);
+
+		&:hover{
+			background-color: white;
+			color: black;
+			strong{
+				color: @altColor;
+			}
+		}
+
+		&.break{
+			display: block;
+			background-color: fade(white, 10%);
+			border: none;
+			h3{
+				color: white;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.cta{
+	display: none;
+}
+
+.scroller-controls{
+	.no-select;
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: @z01Modal+1;
+	pointer-events: none;
+
+	.control{
+		.transition(all, 0.25s, ease-out);
+		.no-select;
+
+		font-weight: 100;
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		font-size: 40px;
+		pointer-events: all;
+
+		&:hover{
+			text-decoration: none;
+			color: @altColor;
+		}
+	}
+
+	.close{
+		.rounded(10px);
+		background-color: fade(black, 80%);
+		padding: 10px;
+		right: 20px;
+		top: 20px;
+
+		.small{
+			font-size: 20px;
+		}
+	}
+
+	.arrow-left,
+	.arrow-right{
+		background-image: url("/images/icons/arrow-key-right.png");
+		width: 100px;
+		height: 100px;
+		right: 10px;
+		top: 50%;
+		background-size: cover;
+
+		&:hover{
+			width: 135px;
+			height: 135px;
+			margin-top: -20px;
+		}
+
+		@media (max-width: @threshold1) {
+			width: 75px;
+			height: 75px;
+
+			&:hover{
+				width: 100px;
+				height: 100px;
+				margin-top: -15px;
+			}
+		}
+
+		@media (max-width: @threshold3) {
+			width: 50px;
+			height: 50px;
+
+			&:hover{
+				width: 80px;
+				height: 80px;
+				margin-top: -15px;
+			}
+		}
+	}
+
+	.arrow-left{
+		.rotation(180deg);
+
+		right: 0;
+		left: 10px;
+	}
+}
+
+///////////////////////////////////////////////////////////
+//
+// Full screen (showing-scroller flag)
+//
+///////////////////////////////////////////////////////////
+
+html.showing-scroller{
+	body{
+		overflow: hidden;
+	}
+
+	.scroller#scroller{
+		zoom: 1;
+		background-color: fade(black, 80%);
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: @z01Modal;
+		margin: 0;
+		height: 100%;
+		cursor: default;
+
+		&::-webkit-scrollbar {
+			height: 7px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: @altColor;
+		}
+
+		.image-container{
+			width: 100vw;
+			height: 100vh;
+			text-align: center;
+
+			&:hover{
+				outline: none;
+			}
+
+			img{
+				position: relative;
+				top: 5vh;
+				height: 90vh;
+				max-height: none;
+				cursor: default;
+				width: 100%;
+				object-fit: contain;
+				object-position: center center;
+			}
+
+			&.separator{
+				display: none;
+			}
+		}
+
+	}
+
+	.scroller-controls {
+		display: block;
+	}
+
+	.cta{
+		.box-shadow(0px -2px 5px 5px rgba(0,0,0,0.30));
+
+		margin: 0 auto;
+		display: block;
+		position: relative;
+
+		@media (max-height: 800px) {
+			top: -50px;
+		}
+
+		@media (max-height: 300px) {
+			top: -80px;
+		}
+	}
+}

@@ -1,0 +1,98 @@
+section{
+
+	///////////////////////////////////////////////////////////
+	//
+	// what
+	//
+	///////////////////////////////////////////////////////////
+
+	&.what{
+		.top-gradient{
+			background-image: url("/images/hero/top-gradient.png");
+			max-width: 1200px;
+			height: 32px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: -32px;
+		}
+
+		.avatar{
+			margin: 0 auto;
+			display: block;
+		}
+
+		p.intro{
+			//border: none;
+			//margin-top: -40px;
+			//text-align: center;
+
+			//&:before,
+			//&:after{
+			//	content: '"';
+			//	font-size: 40px;
+			//	font-family: "Times New Roman";
+			//}
+		}
+
+
+		.img.lighthouse{
+			background-image: url("/images/photos/lighthouse.jpg");
+			float: right;
+			margin-left: 0;
+			width: 100%;
+			background-repeat: no-repeat;
+			height: 320px;
+			background-size: contain;
+			background-position: top center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			@media (max-width: @threshold3) {
+				height: 350px;
+			}
+		}
+	}
+
+	ul{
+		margin-bottom: 40px;
+		//margin-top: -30px;
+
+		li{
+			//list-style: disc;
+			//margin-left: 20px;
+			color: @accentColor;
+			text-align: center;
+		}
+	}
+
+	#ICXMovie{
+		img{
+			object-fit: cover;
+			object-position: center left;
+		}
+	}
+	#Sophie01{
+		img{
+			object-fit: cover;
+			object-position: center right;
+		}
+	}
+}
+
+html.showing-scroller{
+	#ICXMovie,
+	#Sophie01{
+		img{
+			object-fit: contain;
+			object-position: center center;
+		}
+	}
+
+	section.what{
+		h1,h2,h3,.tag-line,p,.img,
+		.has-2-columns{
+			filter: blur(5px);
+		}
+	}
+}

@@ -1,0 +1,165 @@
+
+///////////////////////////////////////////////////////////
+//
+// header
+//
+///////////////////////////////////////////////////////////
+
+html.scrolled-past-home{
+	header{
+		opacity: 1;
+		top: 0;
+	}
+}
+@media (max-height: @minHeight) {
+	html.hide-header{
+		header{
+			opacity: 0;
+			top: -80px;
+		}
+	}
+}
+
+header{
+	.transition(all, 0.5s, ease-in-out);
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	max-width: @widthDesktop;
+	margin: 0 auto;
+	//position: sticky;
+	//margin-top: 70px;
+	top: -80px;
+	text-align: right;
+	background-color: @blue;
+	//background-image: url("/assets/video/world-still.jpg");
+	//background-image: url("/assets/images/light.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-left: 25px;
+	padding-right: 25px;
+	z-index: @z03OverSections;
+
+	a{
+		&:hover *{
+			color: @altColor !important;
+		}
+	}
+
+	//@media (max-width: @widthDesktop + 100px) {
+	//	margin-top: 25px;
+	//}
+	//
+	//@media (max-width: @widthDesktop) {
+	//	margin-top: 0;
+	//}
+
+	.logo{
+		background-image: url("/images/avatars/logo-icon-blue.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left center;
+		width: 40px;
+		height: 70px;
+		display: block;
+		float: left;
+	}
+
+	h2{
+		line-height: 70px;
+		margin-left: 10px;
+		margin-bottom: 0;
+		float: left;
+		font-size: 25px;
+		color: white;
+	}
+
+
+	.img.menu{
+		//.opacity(0.6);
+		.transition(all, 0.75s, ease-out);
+		background-image: url("/images/icons/menu.png");
+		background-size: contain;
+		width: 32px;
+		height: 31px;
+		display: inline-block;
+		position: relative;
+		top: 8px;
+		right: -30px;
+		margin-left: -30px;
+
+		&:hover{
+			.opacity(1);
+
+		}
+	}
+
+	.button.book-now{
+		background-color: @gold;
+		color: black;
+
+		&:hover{
+			background-color: @mint;
+			color: @blue
+		}
+	}
+
+	h1{
+		float: left;
+	}
+
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: 70px;
+
+		li{
+			display: inline-block;
+			height: 70px;
+			padding: 0 10px;
+			line-height: 70px;
+			font-size: 14px;
+
+			//a{
+			//	color: white;
+			//	text-decoration: none;
+			//	font-weight: 300;
+			//
+			//	&:hover{
+			//		color: @gold;
+			//	}
+			//}
+
+			&.menu{
+				//width: 150px;
+				cursor: pointer;
+
+				@media (max-width: @threshold1) {
+					width: 100px;
+				}
+
+				@media (max-width: @threshold2) {
+					width: 50px;
+				}
+
+				img{
+					display: inline-block;
+					position: relative;
+					top: 8px;
+
+					&:before{
+						content: 'MENU';
+						display: block;
+					}
+					//margin-top: 30px;
+					//margin-left: -30px;
+					//position: absolute;
+				}
+			}
+		}
+	}
+}

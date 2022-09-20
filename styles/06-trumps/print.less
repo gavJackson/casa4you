@@ -1,0 +1,140 @@
+@media print{
+	html,body, main, section{
+		background: white !important;
+		color: black !important;
+		background: none !important;
+	}
+
+	footer,
+	section{
+		page-break-before: always;
+
+		.has-2-columns,
+		.has-3-columns,
+		.has-4-columns,
+		p{
+			page-break-inside: avoid;
+		}
+	}
+
+	///////////////////////////////
+	// Windows print fixes
+	///////////////////////////////
+
+	// These styles force windows to print background colors and scales to 60%
+	// as for some reason windows prints screens much larger than OSX.
+
+	body{
+		-webkit-print-color-adjust: exact !important;
+	}
+
+	html.is-Windows{
+		body{
+			zoom: 0.6;
+		}
+	}
+
+	.animated {
+		-webkit-animation-duration: 1ms !important;
+		animation-duration: 1ms !important;
+		-webkit-transition-duration: 1ms !important;
+		transition-duration: 1ms !important;
+		-webkit-animation-iteration-count: 1 !important;
+		animation-iteration-count: 1 !important;
+		visibility: visible !important;
+	}
+
+	///////////////////////////////
+
+	h1, h2, h3, h4, body, p, strong, .tag-line, details, blockquote{
+		color: black !important;
+	}
+
+	p.intro{
+		border-color: black !important;
+	}
+
+	.home .logo{
+		background-color: black;
+		border: 10px solid black;
+	}
+
+	.how .logo-icon,
+	.who .logo-icon{
+		background-image: url("/images/logos/logo-icon-black.png") !important;
+	}
+
+	.scroller{
+		zoom: 0.75;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.image-container{
+			margin-bottom: 10px;
+		}
+	}
+
+	.hero-container,
+	.top-cover, .image-banner,
+	.home .buttons, .home .scroll-info,
+	.what .top-gradient,
+	.button, .after-button,
+	video, .whats-app-button, header,
+	.dont-print {
+		display: none !important;
+	}
+
+	a{
+		color: blue !important;
+	}
+
+	table{
+		background: none;
+
+		tr{
+			background-color: transparent !important;
+		}
+
+		th, td{
+			color: black !important;
+		}
+	}
+
+	footer{
+		background-color: white !important;
+		background: none;
+		color: black !important;
+
+		.img.logo{
+			background-color: black;
+			border: 10px solid black;
+		}
+	}
+
+	///////////////////////////////////////////////////////////
+	//
+	// Forms
+	//
+	///////////////////////////////////////////////////////////
+
+	input, select{
+		box-shadow: none;
+		border-radius: 0;
+		background: #eeeeee;
+		color: black;
+		border: none;
+	}
+}
+
+///////////////////////////////////////////////////////////
+//
+// Util to only show on print
+//
+///////////////////////////////////////////////////////////
+
+@media screen{
+	.only-print{
+		display: none;
+	}
+}
